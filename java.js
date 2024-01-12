@@ -46,7 +46,9 @@ nappulat.addEventListener('click', (event) => {
             vastaus.appendChild(plus);
             // valitse funktio laskutomitus
             valinta = 'add';
+            // move numbers to from N to X variable and clear N variable to accept more numbers
             numeroX = numeroN;
+            numeroN = null;
             break;
 
         case 'minus':
@@ -56,13 +58,14 @@ nappulat.addEventListener('click', (event) => {
             // valitse funktio laskutomitus
             valinta = 'miinus';
             numeroX = numeroN;
+            numeroN = null;
             break;
         case 'one':
             let yksi = document.createElement('yksi');
             yksi.innerText = '1';
             vastaus.appendChild(yksi);
             num = 1;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'two':
             let kaksi = document.createElement('kaksi');
