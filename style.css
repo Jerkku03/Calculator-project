@@ -1,0 +1,22 @@
+#main {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#vastaus {
+    padding: 10px;
+    margin: 20px;
+    height: 50px;
+    min-width: 200px;
+    border: 5px black;
+    border-style: dashed;
+}
+
+#nappulat {
+    display: flex;
+
+}
