@@ -30,7 +30,7 @@ const vahenna = function(a, b) {
 }
 
 
-let numeroN = 0;
+let numeroN = [];
 let numeroX = 0;
 let valinta = '';
 
@@ -46,6 +46,8 @@ nappulat.addEventListener('click', (event) => {
             vastaus.appendChild(plus);
             // valitse funktio laskutomitus
             valinta = 'add';
+            // convert list of numbers to single number
+            numeroN = Number(numeroN);
             // move numbers to from N to X variable and clear N variable to accept more numbers
             numeroX = numeroN;
             numeroN = null;
@@ -72,66 +74,67 @@ nappulat.addEventListener('click', (event) => {
             kaksi.innerText = '2';
             vastaus.appendChild(kaksi);
             num = 2;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'three':
             let three = document.createElement('three');
             three.innerText = '3';
             vastaus.appendChild(three);
             num = 3;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'four':
             let four = document.createElement('four');
             four.innerText = '4';
             vastaus.appendChild(four);
             num = 4;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'five':
             let five = document.createElement('five');
             five.innerText = '5';
             vastaus.appendChild(five);
             num = 5;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'six':
             let six = document.createElement('six');
             six.innerText = '6';
             vastaus.appendChild(six);
             num = 6;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'seven':
             let seven = document.createElement('seven');
             seven.innerText = '7';
             vastaus.appendChild(seven);
             num = 7;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'eight':
             let eight = document.createElement('eight');
             eight.innerText = '8';
             vastaus.appendChild(eight);
             num = 8;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'nine':
             let nine = document.createElement('nine');
             nine.innerText = '9';
             vastaus.appendChild(nine);
             num = 9;
-            numeroN = num;
+            numeroN += num;
                 break;
         case 'zero':
             let zero = document.createElement('zero');
             zero.innerText = '0';
             vastaus.appendChild(zero);
             num = 0;
-            numeroN = num;
+            numeroN += num;
                 break;
     }
 });
+
 
 
 // laskimen toiminta funktio
