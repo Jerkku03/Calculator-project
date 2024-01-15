@@ -28,7 +28,13 @@ const lisaa = function(a, b) {
 const vahenna = function(a, b) {
     return a - b;
 }
+const kerro = function(a,b) {
+    return a * b;
+}
 
+const jaa = function(a, b) {
+    return a / b;
+}
 
 let numeroN = [];
 let numeroX = 0;
@@ -59,8 +65,32 @@ nappulat.addEventListener('click', (event) => {
             vastaus.appendChild(miinus);
             // valitse funktio laskutomitus
             valinta = 'miinus';
+            numeroN = Number(numeroN);
+            // move numbers to from N to X variable and clear N variable to accept more numbers
             numeroX = numeroN;
-            numeroN = null;
+            numeroN = [];
+            break;
+        case 'multiply':
+            let multiply = document.createElement('multiply');
+            multiply.innerText = '*';
+            vastaus.appendChild(multiply);
+            // valitse funktio laskutomitus
+            valinta = 'multiply';
+            numeroN = Number(numeroN);
+            // move numbers to from N to X variable and clear N variable to accept more numbers
+            numeroX = numeroN;
+            numeroN = [];
+            break;
+        case 'divide':
+            let divide = document.createElement('divide');
+            divide.innerText = '/';
+            vastaus.appendChild(divide);
+            // valitse funktio laskutomitus
+            valinta = 'divide';
+            numeroN = Number(numeroN);
+            // move numbers to from N to X variable and clear N variable to accept more numbers
+            numeroX = numeroN;
+            numeroN = [];
             break;
         case 'one':
             let yksi = document.createElement('yksi');
@@ -145,14 +175,22 @@ let operate = function(valinta) {
     }   else if (valinta == 'miinus'){
         vast = vahenna(numeroX, numeroN);
         return vast;
+    }   else if (valinta == 'multiply'){
+        vast = kerro(numeroX, numeroN);
+        return vast;
+    }   else if (valinta == 'divide'){
+        vast = jaa(numeroX, numeroN);
+        return vast;
     }
 };
 
 // ythäkuin aktivoi laskutoimituksen
 equals.addEventListener('click', () => {
     numeroN = Number(numeroN);
-    console.log(numeroN);
-    console.log(operate(valinta));
+    vastaus.innerText = '';
+    let vast = document.createElement('vast');
+    vast.innerText = operate(valinta);
+    vastaus.appendChild(vast);
 });
 
 
