@@ -50,7 +50,7 @@ nappulat.addEventListener('click', (event) => {
             numeroN = Number(numeroN);
             // move numbers to from N to X variable and clear N variable to accept more numbers
             numeroX = numeroN;
-            numeroN = null;
+            numeroN = [];
             break;
 
         case 'minus':
@@ -150,6 +150,8 @@ let operate = function(valinta) {
 
 // ythäkuin aktivoi laskutoimituksen
 equals.addEventListener('click', () => {
+    numeroN = Number(numeroN);
+    console.log(numeroN);
     console.log(operate(valinta));
 });
 
