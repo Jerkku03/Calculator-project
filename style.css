@@ -1,9 +1,13 @@
+body, html {
+    height: 100%;
+}
+
 #main {
-    background-color: aqua;
+    height: 100%;
+    background-color: black;
     display: flex;
     flex-direction: column;
     padding-top: 30px;
-    justify-content: center;
     align-items: center;
 }
 
@@ -12,11 +16,29 @@
     margin: 20px;
     height: 50px;
     min-width: 200px;
-    border: 5px black;
+    border: 5px white;
     border-style: dashed;
+    background-color: blanchedalmond;
 }
 
 #nappulat {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+}
 
+.nappi {
+    padding: 10px;
+    margin: 5px;
+    color: black;
+}
+
+#equals {
+    padding: 10px;
+    margin: 5px;
+    width: 160px;
+}
+
+#reload {
+    margin: 20px;
 }

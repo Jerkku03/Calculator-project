@@ -18,7 +18,7 @@ nappulat = document.querySelector('#nappulat');
 //nine = document.querySelector('#nine');
 //zero = document.querySelector('#zero');
 equals = document.querySelector('#equals');
-
+reload = document.querySelector('#reload');
 
 // laskutoimitukset
 const lisaa = function(a, b) {
@@ -193,6 +193,9 @@ equals.addEventListener('click', () => {
     vastaus.appendChild(vast);
 });
 
+reload.addEventListener('click', () => {
+    location.reload();
+});
 
 
 
